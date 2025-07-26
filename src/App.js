@@ -20,7 +20,8 @@ function App() {
   const getUser = async () => {
 
     const apiUrl = await getApiUrl("");
-    await axios.get(apiUrl).then((response) => {
+    await axios.get(apiUrl).then((response) => 
+      const message =  response?.data?.message;
       document.getElementById("message").innerHTML = message ? message : response?data;
     }).catch((error) => {
       console.error("Error fetching users:", error);
